@@ -1,0 +1,11 @@
+# Data / split configuration (single source of truth for the dataset pipeline).
+# The DATA split is deterministic and frozen (split_seed) so every variant x model-seed sees the
+# identical train/val/test images; only the model-init `seed` varies across runs.
+modality: UWF
+img_size: 512
+# three-way stratified split on the rare-lesion indicator (has any of NV/VH/RD).
+# fractions are of the whole dataset: train 0.70 / val 0.15 / test 0.15
+test_size: 0.15
+val_size: 0.15
+stratify: true
+split_seed: 42          # FROZEN: fixes which images land in train/val/test (constant across runs)

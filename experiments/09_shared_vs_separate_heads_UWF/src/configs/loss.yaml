@@ -1,0 +1,11 @@
+# Loss configuration. IDENTICAL across all head-mode variants -- the loss never changes, only how
+# the logits are routed into shared-vs-split heads. Because the split-head forward concatenates the
+# common (idx 0-3) and rare (idx 4-6) logits back into ONE canonical length-7 vector, the exact same
+# AsymmetricFocalLoss (single mean over 7 logits) applies to every variant -> reduction-consistent.
+afl_gamma: 2.0
+afl_beta: [0.7, 0.7, 0.7, 0.8, 0.95, 0.95, 0.95]   # rare NV/VH/RD get beta 0.95 (FN penalized hard)
+grade_label_smoothing: 0.05
+supcon_temperature: 0.1
+# combined objective: L = L_lesion + lambda_grade*L_grade + lambda_supcon*(L_supcon_early + L_supcon_deep)
+lambda_grade: 1.0
+lambda_supcon: 0.5

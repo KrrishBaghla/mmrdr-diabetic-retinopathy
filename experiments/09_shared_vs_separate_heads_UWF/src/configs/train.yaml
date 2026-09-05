@@ -1,0 +1,19 @@
+# Training configuration -- the proven exp-3/5 spine, held IDENTICAL across all variants and seeds.
+lr: 1.0e-4
+weight_decay: 1.0e-4
+epochs: 60
+patience: 10                 # early stopping on the CLINICAL selection metric (not val loss)
+grad_clip: 2.0
+batch_size: 8                # 16 on dual-T4 via DataParallel
+num_workers: 2
+use_amp: true
+seed: 42                     # model-init seed for THIS run; the ablation sweeps [42, 1, 2023]
+seeds: [42, 1, 2023]         # >=3 seeds for mean +/- std and paired significance testing
+
+# model selection / early stopping: maximize a clinical composite computed at optimized thresholds
+# on the validation set. select_score = sel_rare_weight*mean_rare_recall + sel_f1_weight*macro_f1
+selection_metric: composite
+sel_rare_weight: 0.5
+sel_f1_weight: 0.5
+
+run_training: false          # gate: flip to true on a GPU (Kaggle) to actually train

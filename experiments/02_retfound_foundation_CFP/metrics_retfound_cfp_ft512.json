@@ -1,0 +1,270 @@
+{
+  "tag": "retfound_cfp_ft512",
+  "paper_target": {
+    "AccG": 0.822,
+    "F1G": 0.714,
+    "AccL": 0.951,
+    "F1L": 0.682
+  },
+  "row_A_thr0.5": {
+    "AccG": 0.809438202247191,
+    "F1G": 0.6919659902911721,
+    "AccL": 0.9476083467094703,
+    "F1L": 0.6051173615944252,
+    "F1G_micro": 0.809438202247191,
+    "F1G_weighted": 0.8061456247398091,
+    "F1L_micro": 0.8058067586863399,
+    "F1L_samples": 0.30585229502083433,
+    "F1L_weighted": 0.7962045207396795,
+    "AccL_exact": 0.7262921348314607,
+    "AccL_per_lesion": [
+      0.9110112359550562,
+      0.9051685393258427,
+      0.8831460674157303,
+      0.9797752808988764,
+      0.9743820224719101,
+      0.988314606741573,
+      0.9914606741573033
+    ],
+    "AccL_all_negative_floor": 0.8631781701444623
+  },
+  "row_B_tuned": {
+    "AccG": 0.809438202247191,
+    "F1G": 0.6919659902911721,
+    "AccL": 0.9415088282504013,
+    "F1L": 0.6742741549705398,
+    "F1G_micro": 0.809438202247191,
+    "F1G_weighted": 0.8061456247398091,
+    "F1L_micro": 0.7969690216180075,
+    "F1L_samples": 0.300349011787214,
+    "F1L_weighted": 0.8043393937750464,
+    "AccL_exact": 0.7150561797752809,
+    "AccL_per_lesion": [
+      0.9087640449438202,
+      0.8903370786516854,
+      0.8826966292134831,
+      0.9568539325842697,
+      0.9703370786516854,
+      0.990561797752809,
+      0.9910112359550561
+    ],
+    "AccL_all_negative_floor": 0.8631781701444623
+  },
+  "bootstrap_ci_95": {
+    "AccG": [
+      0.7923483146067416,
+      0.8251685393258427
+    ],
+    "F1G": [
+      0.6650216616437987,
+      0.7175625214242227
+    ],
+    "AccL": [
+      0.9434349919743178,
+      0.9513980738362761
+    ],
+    "F1L": [
+      0.5698547559856088,
+      0.6361129293199151
+    ]
+  },
+  "grade": {
+    "accuracy": 0.809438202247191,
+    "balanced_acc": 0.6786851803383988,
+    "quadratic_kappa": 0.8838304858032224,
+    "mcc": 0.6735255624405079,
+    "macro_f1": 0.6919659902911721,
+    "per_class_recall": [
+      0.9478458049886621,
+      0.4517374517374517,
+      0.6650366748166259,
+      0.59,
+      0.7388059701492538
+    ],
+    "confusion_matrix": [
+      [
+        1254,
+        48,
+        20,
+        0,
+        1
+      ],
+      [
+        74,
+        117,
+        68,
+        0,
+        0
+      ],
+      [
+        41,
+        61,
+        272,
+        31,
+        4
+      ],
+      [
+        1,
+        6,
+        25,
+        59,
+        9
+      ],
+      [
+        1,
+        1,
+        21,
+        12,
+        99
+      ]
+    ]
+  },
+  "lesion_thr0.5": {
+    "macro_f1": 0.6051173615944252,
+    "macro_auroc": 0.970620021172504,
+    "macro_auprc": 0.7411949349602495,
+    "mean_rare_recall": 0.5633621191082597,
+    "rare_recall": {
+      "NV": 0.6694214876033058,
+      "VH": 0.8301886792452831,
+      "RD": 0.19047619047619047
+    }
+  },
+  "lesion_per_class": {
+    "MA": {
+      "precision": 0.8932714617169374,
+      "recall": 0.8789954337899544,
+      "specificity": 0.9318013343217197,
+      "f1": 0.8860759493670887,
+      "auroc": 0.9736042426150269,
+      "auprc": 0.96109490661386,
+      "support": 876
+    },
+    "HE": {
+      "precision": 0.7746741154562383,
+      "recall": 0.8221343873517787,
+      "specificity": 0.9296102385107621,
+      "f1": 0.797698945349952,
+      "auroc": 0.9604685599449998,
+      "auprc": 0.8887856579909892,
+      "support": 506
+    },
+    "IH": {
+      "precision": 0.7485148514851485,
+      "recall": 0.7397260273972602,
+      "specificity": 0.925904317386231,
+      "f1": 0.7440944881889763,
+      "auroc": 0.9429031550920588,
+      "auprc": 0.8236341358809282,
+      "support": 511
+    },
+    "VB/IRMA": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "specificity": 0.999083409715857,
+      "f1": 0.0,
+      "auroc": 0.9485057446763157,
+      "auprc": 0.22457048467401386,
+      "support": 43
+    },
+    "NV": {
+      "precision": 0.826530612244898,
+      "recall": 0.6694214876033058,
+      "specificity": 0.9919201520912547,
+      "f1": 0.7397260273972602,
+      "auroc": 0.9819804072526159,
+      "auprc": 0.8428863752297461,
+      "support": 121
+    },
+    "VH": {
+      "precision": 0.7213114754098361,
+      "recall": 0.8301886792452831,
+      "specificity": 0.9921731123388582,
+      "f1": 0.7719298245614035,
+      "auroc": 0.9926899822787449,
+      "auprc": 0.8792675937001516,
+      "support": 53
+    },
+    "RD": {
+      "precision": 0.6666666666666666,
+      "recall": 0.19047619047619047,
+      "specificity": 0.9990925589836661,
+      "f1": 0.2962962962962963,
+      "auroc": 0.9941880563477659,
+      "auprc": 0.5681253906320574,
+      "support": 21
+    }
+  },
+  "thresholds": [
+    0.5700000000000002,
+    0.37000000000000005,
+    0.33,
+    0.2,
+    0.22000000000000003,
+    0.6900000000000002,
+    0.39000000000000007
+  ],
+  "test_loss": 0.6360815594169531,
+  "split_signature": "8ba3ee31bb06",
+  "n_train": 7559,
+  "n_val": 1334,
+  "n_test": 2225,
+  "weight_load_report": {
+    "ckpt": "/root/.cache/huggingface/hub/models--YukunZhou--RETFound_mae_natureCFP/snapshots/556830f78214f0e8da35af965292ac5a3180ac47/RETFound_mae_natureCFP.pth",
+    "sha16": "61c20fc6d13c30d4",
+    "n_ckpt_tensors": 294,
+    "n_model_tensors": 294,
+    "blocks_total": 288,
+    "blocks_matched": 288,
+    "blocks_frac": 1.0,
+    "missing": [],
+    "unexpected": [],
+    "pos_embed_resampled": true,
+    "pos_embed_from": [
+      1,
+      197,
+      1024
+    ],
+    "fc_norm_from_encoder_norm": true
+  },
+  "params_total": 304161804,
+  "params_trainable": 304161804,
+  "peak_gpu_mem_gb": 13.471642112,
+  "cfg": {
+    "arch": "vit_large_patch16_224",
+    "img_size": 512,
+    "global_pool": "avg",
+    "drop_path": 0.2,
+    "blr": 0.001,
+    "min_lr": 1e-06,
+    "layer_decay": 0.65,
+    "weight_decay": 0.05,
+    "epochs": 30,
+    "warmup_epochs": 3,
+    "label_smoothing": 0.1,
+    "lambda_lesion": 1.0,
+    "grad_clip": 1.0,
+    "patience": 8,
+    "batch_size_per_gpu": 8,
+    "accum_steps": 2,
+    "num_workers": 4,
+    "grad_checkpointing": true,
+    "val_frac": 0.15,
+    "stratify": true,
+    "use_circular_mask": false,
+    "seed": 42,
+    "thr_min": 0.05,
+    "thr_max": 0.95,
+    "thr_step": 0.01,
+    "thr_objective": "f1",
+    "run_training": true,
+    "time_budget_hrs": 10.5,
+    "tag": "retfound_cfp_ft512",
+    "backup_to_dataset": true,
+    "backup_dataset_slug": "krrish1008/checkpoint-retfound-512",
+    "backup_every": 1,
+    "eff_batch": 32,
+    "lr": 0.000125,
+    "ckpt_dir": "/kaggle/working/checkpoints"
+  }
+}

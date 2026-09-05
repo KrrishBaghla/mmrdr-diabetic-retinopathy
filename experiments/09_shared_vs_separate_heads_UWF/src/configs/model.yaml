@@ -1,0 +1,14 @@
+# Model / head configuration. The ONLY thing that varies across ablation variants is `head_mode`.
+# Everything else (trunk = ResNet-50 + FPN, 512-d pooled feature, grade head, SupCon proj heads)
+# is frozen-identical to the mature folder-3 UWF_SupConDRNet baseline.
+#
+# head_mode:
+#   shared      -> Model A  : Linear(512,7)                       (minimal-capacity baseline)
+#   shared_mlp  -> Model A' : Linear(512,128)->ReLU->Drop->Linear(128,7)  (CAPACITY-MATCHED control)
+#   separate    -> Model B  : Linear(512,4) common + MLP(512->128->3) rare  (the hypothesis)
+#   adapter     -> Model C  : shared body + per-group adapters   (soft-split middle ground)
+head_mode: separate
+hidden_dim: 128
+adapter_dim: 64
+dropout: 0.3
+pretrained: true

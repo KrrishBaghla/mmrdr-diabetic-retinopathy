@@ -1,0 +1,69 @@
+{
+  "table": {
+    "mean_rare_recall": {
+      "real": 0.8776091081593927,
+      "oversample": 0.8073937214953893,
+      "synth": 0.8326375711574953
+    },
+    "recall_NV": {
+      "real": 0.8941176470588236,
+      "oversample": 0.8058823529411765,
+      "synth": 0.888235294117647
+    },
+    "recall_VH": {
+      "real": 0.9,
+      "oversample": 0.8421052631578947,
+      "synth": 0.9
+    },
+    "recall_RD": {
+      "real": 0.8387096774193549,
+      "oversample": 0.7741935483870968,
+      "synth": 0.7096774193548387
+    },
+    "rare_macro_f1": {
+      "real": 0.6868457878533446,
+      "oversample": 0.713843450444537,
+      "synth": 0.6559078590785908
+    },
+    "rare_macro_auprc": {
+      "real": 0.6531168923651379,
+      "oversample": 0.796921938018276,
+      "synth": 0.6647648103560911
+    },
+    "macro_f1": {
+      "real": 0.7073424716333518,
+      "oversample": 0.7155525962205237,
+      "synth": 0.6903153229317102
+    },
+    "grade_qkappa": {
+      "real": 0.9019557179706336,
+      "oversample": 0.8802017232474826,
+      "synth": 0.8922032059312617
+    },
+    "common_macro_f1": {
+      "real": 0.7227149844683572,
+      "oversample": 0.7168344555525137,
+      "synth": 0.7161209208215499
+    }
+  },
+  "verdict": false,
+  "seed": 42,
+  "quality_gate": {
+    "64": {
+      "fid_syn_vs_real": 200.0204935958642,
+      "fid_real_vs_real": 26.80136164974,
+      "kid_syn_vs_real": 0.2563839852809906,
+      "n_real": 600,
+      "n_syn": 600
+    },
+    "256": {
+      "fid_syn_vs_real": 246.8771711532565,
+      "fid_real_vs_real": 29.228930702930953,
+      "kid_syn_vs_real": 0.3264337182044983,
+      "n_real": 600,
+      "n_syn": 600
+    }
+  },
+  "split_signature": "da1ec8e21f22",
+  "quick_pass": true
+}

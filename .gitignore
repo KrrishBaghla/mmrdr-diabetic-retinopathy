@@ -1,0 +1,20 @@
+# Datasets and large binaries are NOT tracked in this repository.
+MMRDR/
+*.zip
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+Diabetic_env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

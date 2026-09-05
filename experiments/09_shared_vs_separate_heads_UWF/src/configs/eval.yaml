@@ -1,0 +1,7 @@
+# Evaluation configuration. Per-lesion decision thresholds are optimized on the VALIDATION set only
+# (fit before test is ever touched) -- the "cheap win" no prior experiment in this repo exploited
+# (all used a fixed 0.5). The identical sweep is applied to every variant for fairness.
+thr_min: 0.05
+thr_max: 0.95
+thr_step: 0.01
+thr_objective: f1            # f1 (primary) | youden (sensitivity-oriented secondary report)

@@ -1,0 +1,8 @@
+# Kaggle checkpoint-autosave configuration. /kaggle/working is wiped on idle-out, so checkpoints are
+# versioned into a Kaggle Dataset every `backup_every` epochs and on each new best. Credentials are
+# NEVER hard-coded: priority ~/.kaggle/kaggle.json > env vars (KAGGLE_USERNAME/KAGGLE_KEY) > Kaggle
+# Secrets. Uses a slug DISTINCT from other experiments so checkpoints never collide.
+backup_to_dataset: true
+backup_dataset_slug: krrish1008/checkpoint-heads-ablation
+backup_every: 2
+resume: true                 # auto-resume from newest checkpoint under /kaggle/input
